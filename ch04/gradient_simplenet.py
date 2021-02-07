@@ -1,6 +1,10 @@
 # coding: utf-8
 import sys, os
-sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록 설정
+#sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록 설정
+
+#sys.path.append("C:\\Users\\user\\Documents\\GitHub\\deep-learning-from-scratch")
+
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 import numpy as np
 from common.functions import softmax, cross_entropy_error
 from common.gradient import numerical_gradient
@@ -29,3 +33,5 @@ f = lambda w: net.loss(x, t)
 dW = numerical_gradient(f, net.W)
 
 print(dW)
+
+#print(sys.path)
