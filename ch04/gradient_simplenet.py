@@ -1,6 +1,7 @@
 # coding: utf-8
 import sys, os
 #sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록 설정
+
 #sys.path.append("C:\\Users\\user\\Documents\\GitHub\\deep-learning-from-scratch")
 
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
