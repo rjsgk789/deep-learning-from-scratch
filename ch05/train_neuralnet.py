@@ -1,6 +1,6 @@
 # coding: utf-8
 import sys, os
-sys.path.append(os.pardir)
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 import numpy as np
 from dataset.mnist import load_mnist
@@ -15,6 +15,7 @@ iters_num = 10000
 train_size = x_train.shape[0]
 batch_size = 100
 learning_rate = 0.1
+
 
 train_loss_list = []
 train_acc_list = []
