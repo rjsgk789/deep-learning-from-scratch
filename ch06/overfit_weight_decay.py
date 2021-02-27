@@ -2,7 +2,7 @@
 import os
 import sys
 
-sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록 설정
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 import numpy as np
 import matplotlib.pyplot as plt
 from dataset.mnist import load_mnist
@@ -16,8 +16,8 @@ x_train = x_train[:300]
 t_train = t_train[:300]
 
 # weight decay（가중치 감쇠） 설정 =======================
-#weight_decay_lambda = 0 # weight decay를 사용하지 않을 경우
-weight_decay_lambda = 0.1
+weight_decay_lambda = 0 # weight decay를 사용하지 않을 경우
+#weight_decay_lambda = 0.1
 # ====================================================
 
 network = MultiLayerNet(input_size=784, hidden_size_list=[100, 100, 100, 100, 100, 100], output_size=10,
