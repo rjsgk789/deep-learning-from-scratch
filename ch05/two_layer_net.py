@@ -67,7 +67,7 @@ class TwoLayerNet:
         layers = list(self.layers.values())
         layers.reverse()
         for layer in layers:
-            dout = layer.backward(dout)
+            dout = layer.backward(dout)     #list.backward???
 
         # 결과 저장
         grads = {}
